@@ -1,0 +1,73 @@
+// == array and loops ==
+console.log("<Array y loops>");
+// sum and resistors in serie
+console.log(">Suma de resistores en serie");
+var resistance = [Math.abs(-1), 5, 6, 3]  
+var sum = 0;
+for (var i = 0; i < resistance.length; i++){
+    sum +=resistance[i];
+}
+console.log("La resistencia total es", sum, "ohms");
+
+var resistance = [14, 3.5, 6]  
+var sum = 0;
+for (var i = 0; i < resistance.length; i++){
+    sum +=resistance[i];
+}
+console.log("La resistencia total es", sum, "ohms");
+
+var resistance = [8, 15, 100]  
+var sum = 0;
+for (var i = 0; i < resistance.length; i++){
+    sum +=resistance[i];
+}
+console.log("La resistencia total es", sum, "ohms");
+
+// secret society
+console.log(">Sociedad Secreta:");
+var name01 = "Roberto";
+var name02 = "Uriel"; 
+var name03 = "García";
+var name04 = "Sanabria";
+const j = 0
+console.log("El nombre de tu sociedad secreta es:", name01.charAt(j), name02.charAt(j), name03.charAt(j), name04.charAt(j));
+
+// array of multiples
+console.log(">Array de múltiplos");
+let multiple = 2
+let multipleSize = 10
+arrayOfMultiples = (multiple, multipleSize) => {
+    let times = [];
+    let k = 1;
+    for (let l = 1; l <= multipleSize; l++){
+        times.push(multiple * k);
+        k++;
+    }
+    return times;
+}
+console.log("Los primeros "+ multipleSize + " multiplos de " + multiple + " son: " + arrayOfMultiples(multiple, multipleSize));
+
+// == logica ==
+console.log("<Lógica>");
+//user profile
+console.log(">Perfil de usuario");
+let userName = prompt("¿Cuál es tu usuario?"); 
+let userAge = prompt("¿Qué edad tienes?"); 
+let favMovie = prompt("¿Cuál es tu película favorita");
+console.log("Bienvenido", userName + ".", "Tienes", userAge, "años", "y tu película favorita es", favMovie);  
+
+// highest number
+console.log(">Número mayor");
+var arr = [];
+for (var x = 0; x < 10; x++)
+    arr.push(prompt("Elige un número"));
+console.log("Los números que elegiste son: ",arr);
+console.log("De esos números, el mayor es: ", Math.max.apply(null, arr));
+
+// palindrome
+console.log(">Palíndromo");
+let original = prompt("Escribe un texto y te diré si es un palíndromo");
+let og = original.toLowerCase().replace(/\s+/g,"");
+let reversed = og.split('').reverse().join('');
+console.log("Escribiste:", original);
+console.log(og === reversed ? "Es palíndromo" : "No es palíndromo");
